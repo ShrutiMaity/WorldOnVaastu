@@ -1,0 +1,99 @@
+/* ********************* */
+/* ---- General Css ---- */
+/* ********************* */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    /* font-family: "Outfit", sans-serif; */
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+button {
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    border: none;
+}
+
+i {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+/* ********************* */
+/* ---- Root Elements ---- */
+/* ********************* */
+
+:root {
+    /* ----------- Colors ----------- */
+  
+    --black: #202020;
+    --white: #ffff;
+    --orange: #fa513a;
+    --tile-1: linear-gradient(72deg, rgba(109, 128, 254, 0.70) 0.45%, #23D2FD 100%);
+    --tile-2: linear-gradient(72deg, rgba(2, 170, 189, 0.70) -1.48%, #00CDAC 100%);
+    --tile-3: linear-gradient(72deg, #FF998B 0%, #FF6D88 100%);
+    --tile-4: linear-gradient(72deg, #09AFE8 0%, #29F499 100%);
+    --tile-5: linear-gradient(72deg, #764BA2 0%, #667EEA 100%);
+    --tile-6: linear-gradient(72deg, #09203F 0%, #537895 100%);
+    --tile-7: linear-gradient(72deg, #FF61D2 0%, #FE9090 100%);
+  
+  
+    /* ---------- Font Weight ---------- */
+  
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+  
+    /* ------------- Shadows -------------*/
+  
+    --dashboard-tiles-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+    --form-overflow-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+    /*  ------------- Transition  --------------*/
+    --transition-5: 0.5s ease;
+    --transition-3: 0.3s ease;
+  }
