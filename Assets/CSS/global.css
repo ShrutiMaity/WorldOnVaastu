@@ -96,4 +96,5 @@ a {
     /*  ------------- Transition  --------------*/
     --transition-5: 0.5s ease;
     --transition-3: 0.3s ease;
+    --transition-2: 0.2s ease;
   }
