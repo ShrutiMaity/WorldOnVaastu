@@ -25,7 +25,6 @@ header {
     justify-content: space-between;
 
     background-color: rgba(163, 162, 162, 0.183);
-    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
     box-shadow: 0 8px 32px 0 rgba(31, 34, 75, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -44,7 +43,7 @@ header nav {
 }
 
 header nav a {
-    opacity: .6;
+    opacity: .9;
     color: #333;
     color: var(--white);
     font-weight: var(--medium);
@@ -80,20 +79,15 @@ header button {
 
 #hero-section .container {
     max-width: 1200px;
-    /* border: 1px solid yellow; */
     display: grid;
     grid-template-columns: 1fr auto;
 }
 
-#hero-section .content-holder {
-    /* display: flex;
-    align-items: center; */
-}
-
 #hero-section .content {
-    /* border: 1px solid yellow; */
-    /* margin-top: 64px; */
-    margin-top: 32px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 #hero-section .content .highlighted {
@@ -103,7 +97,11 @@ header button {
     font-weight: var(--regular);
     border-radius: 4px;
     background-color: rgba(255, 255, 255, .1);
-    font-size: 20px;
+    font-size: 40px;
+
+    .bold {
+        font-weight: bold;
+    }
 }
 
 #hero-section .content h1 {
@@ -111,15 +109,12 @@ header button {
     font-size: 42px;
     font-weight: 800;
     text-transform: capitalize;
-    /* margin: 16px 0 48px 0; */
-    margin: 16px 0;
 }
 
 #hero-section .content .note {
     color: var(--white);
     font-weight: var(--regular);
     font-size: 16px;
-    margin-bottom: 48px;
 }
 
 #hero-section .content h1 .animated-text-holder {
@@ -131,7 +126,6 @@ header button {
     height: 60px;
     position: relative;
     width: 100%;
-    /* border: 1px solid red; */
 }
 
 #hero-section .content h1 .animated-text-holder .animated-text {
@@ -150,6 +144,7 @@ header button {
     border-radius: 50px;
     font-weight: var(--medium);
     font-size: 20px;
+    width: fit-content;
 }
 
 #hero-section .image-holder img {
@@ -196,7 +191,6 @@ header button {
     left: 50%;
     transform: translate(-50%, 0);
     top: 85%;
-    /* z-index: -1; */
 }
 
 
@@ -207,12 +201,11 @@ header button {
 #course-section {
     min-height: 100vh;
     max-width: 100vw;
-    background-color: #051139;
-    /* background-color: var(--white); */
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    display: flex;
 }
 
 #course-section .course-section-container {
-    /* border: 1px solid red; */
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -234,12 +227,10 @@ header button {
 }
 
 .course-section-container .course-tags span {
-    /* border: 1px solid var(--white); */
     border: 1px solid #142663;
     color: var(--white);
     padding: 8px 24px;
     border-radius: 5px;
-    /* flex-grow: 1; */
     text-align: center;
     cursor: pointer;
     transition: all var(--transition-3);
@@ -264,106 +255,6 @@ header button {
 }
 
 .course-section-container .course-holder .course {
-    border: 1px solid #142663;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 16px;
-    border-radius: 10px;
-}
-
-.course-section-container .course-holder .course .img-holder {
-    border-radius: 10px;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.course-section-container .course-holder .course .course-name {
-    color: var(--white);
-    font-size: 22px;
-    font-weight: var(--medium);
-}
-
-.course-section-container .course-holder .course .desc {
-    /* color: var(--white); */
-    color: gray;
-    font-size: 12px;
-    font-weight: var(--regular);
-}
-
-.course-section-container .course-holder .course .btn {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    background-color: var(--orange);
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-weight: var(--medium);
-    color: var(--white);
-    margin-top: 16px;
-}
-
-
-/* Design 2 */
-.course-section-container .course-holder .course-2 {
-    border: 1px solid #142663;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    /* gap: 16px; */
-    border-radius: 10px;
-    overflow: hidden;
-    /* background-color: #13297094; */
-}
-
-.course-2 .content-holder {
-    padding: 12px;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.course-section-container .course-holder .course-2 .img-holder {
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.course-section-container .course-holder .course-2 .course-name {
-    color: var(--white);
-    font-size: 22px;
-    font-weight: var(--medium);
-}
-
-.course-section-container .course-holder .course-2 .desc {
-    /* color: var(--white); */
-    color: gray;
-    font-size: 12px;
-    font-weight: var(--regular);
-}
-
-.course-section-container .course-holder .course-2 .btn {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    background-color: var(--orange);
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-weight: var(--medium);
-    color: var(--white);
-    margin-top: 16px;
-}
-
-
-/* Design 3 */
-.course-section-container .course-holder .course-3 {
-    /* padding: 12px; */
-}
-
-.course-section-container .course-holder .course-3 .container {
-    /* border: 1px solid #142663; */
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
     display: flex;
     flex-direction: column;
@@ -374,10 +265,9 @@ header button {
     overflow: visible;
     position: relative;
     transform-style: preserve-3d;
-    /* background-clip: padding-box; */
 }
 
-.course-section-container .course-holder .course-3 .container::after {
+.course-section-container .course-holder .course::after {
     position: absolute;
     top: -1px;
     bottom: -1px;
@@ -389,27 +279,26 @@ header button {
     background: linear-gradient(71deg, #0d1212, var(--orange), #0d1212);
 }
 
-.course-section-container .course-holder .course-3 .img-holder {
+.course-section-container .course-holder .course .img-holder {
     overflow: hidden;
     object-fit: cover;
     border-radius: 10px;
     display: flex;
 }
 
-.course-section-container .course-holder .course-3 .course-name {
+.course-section-container .course-holder .course .course-name {
     color: var(--white);
     font-size: 22px;
     font-weight: var(--medium);
 }
 
-.course-section-container .course-holder .course-3 .desc {
-    /* color: var(--white); */
+.course-section-container .course-holder .course .desc {
     color: gray;
     font-size: 12px;
     font-weight: var(--regular);
 }
 
-.course-section-container .course-holder .course-3 .btn {
+.course-section-container .course-holder .course .btn {
     width: 100%;
     display: inline-block;
     text-align: center;

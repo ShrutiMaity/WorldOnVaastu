@@ -178,6 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-  // renderCourse(coursesList);
+  renderCourse(coursesList);
 
 });
