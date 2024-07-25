@@ -38,9 +38,9 @@ let tl = gsap.timeline({
 const list = document.querySelectorAll(".animated-text");
 
 list.forEach((tag, index) => {
-  console.log('index', index);
+  // console.log('index', index);
   if (index >= 0) {
-    console.log(1);
+    // console.log(1);
     tl.from(`.${tag.classList[1]} .word`, {
       yPercent: 100,
       rotationX: 90,
@@ -55,7 +55,7 @@ list.forEach((tag, index) => {
     );
   }
   if (index <= list.length - 1) {
-    console.log(2);
+    // console.log(2);
     tl.to(`.${tag.classList[1]} .word`, {
       delay: 1,
       yPercent: -100,
@@ -96,3 +96,39 @@ gsap.to('#video-section .background-element', {
 //     markers: true
 //   }
 // })
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const locoScroll = new LocomotiveScroll({
+//   el: document.querySelector("#Main"),
+//   smooth: true,
+
+//   // for tablet smooth
+//   tablet: { smooth: true },
+
+//   // for mobile
+//   smartphone: { smooth: true }
+// });
+// locoScroll.on("scroll", ScrollTrigger.update);
+
+// ScrollTrigger.scrollerProxy("#Main", {
+//   scrollTop(value) {
+//     return arguments.length
+//       ? locoScroll.scrollTo(value, 0, 0)
+//       : locoScroll.scroll.instance.scroll.y;
+//   },
+//   getBoundingClientRect() {
+//     return {
+//       top: 0,
+//       left: 0,
+//       width: window.innerWidth,
+//       height: window.innerHeight
+//     };
+//   }
+
+//   // follwoing line is not required to work pinning on touch screen
+
+//   /* pinType: document.querySelector(".smooth-scroll").style.transform
+//     ? "transform"
+//     : "fixed"*/
+// });
