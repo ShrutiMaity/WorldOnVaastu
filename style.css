@@ -227,7 +227,8 @@ header button {
 }
 
 .course-section-container .course-tags span {
-    border: 1px solid #142663;
+    /* border: 1px solid #142663; */
+    border: 1px solid rgba(128, 128, 128, 0.356);
     color: var(--white);
     padding: 8px 24px;
     border-radius: 5px;
@@ -251,7 +252,51 @@ header button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    padding: 5px;
+}
+
+.course-section-container .course-holder .course-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+@keyframes rotate-gradient {
+
+    to {
+        rotate: 360deg;
+    }
+
+    /* 0% {
+        background: linear-gradient(71deg, #080509, var(--orange), #080509);
+    } */
+
+    /* Adding a step in the middle
+    20% {
+        background-image: linear-gradient(130deg, #080509, var(--orange), #080509);
+    }
+
+    40% {
+        background-image: linear-gradient(190deg, #080509, var(--orange), #080509);
+    }
+
+    60% {
+        background-image: linear-gradient(250deg, #080509, var(--orange), #080509);
+    }
+
+    80% {
+        background-image: linear-gradient(310deg, #080509, var(--orange), #080509);
+    }
+
+    100% {
+        background-image: linear-gradient(360deg, #080509, var(--orange), #080509);
+    } */
+
+    /* 50% {
+        background: linear-gradient(360deg, #080509, var(--orange), #080509);
+    }
+
+    100% {
+        background: linear-gradient(71deg, #080509, var(--orange), #080509);
+    } */
 }
 
 .course-section-container .course-holder .course {
@@ -259,15 +304,19 @@ header button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: baseline;
     padding: 12px;
     gap: 16px;
     border-radius: 10px;
     overflow: visible;
     position: relative;
     transform-style: preserve-3d;
+    margin: 1px;
 }
 
+
 .course-section-container .course-holder .course::after {
+    transform: translateZ(-1px) !important;
     position: absolute;
     top: -1px;
     bottom: -1px;
@@ -275,7 +324,6 @@ header button {
     right: -1px;
     content: '';
     border-radius: inherit;
-    transform: translateZ(-1px);
     background: linear-gradient(71deg, #0d1212, var(--orange), #0d1212);
 }
 

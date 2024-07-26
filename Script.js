@@ -125,6 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderCourse = (courses) => {
     courseContainer.innerHTML = ""
     courses.forEach(({ name, imgSrc, enrollLink, desc, level }) => {
+      let courseWrapper = document.createElement('div');
+      courseWrapper.classList.add('course-wrapper')
+
       let course = document.createElement('div');
       course.classList.add('course')
 
@@ -153,11 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
       course.appendChild(nameTag)
       course.appendChild(descTag)
       course.appendChild(linkTag)
+      courseWrapper.appendChild(course)
 
-      courseContainer.appendChild(course)
+      courseContainer.appendChild(courseWrapper)
     });
+    ScrollReveal().sync();
 
-    ScrollReveal().reveal('.course-holder .course', { interval: 100 });
+
   }
 
   const removeTagHighlight = () => tagsList.forEach((tag) => tag.classList.remove('active'))
@@ -179,5 +184,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   renderCourse(coursesList);
+  ScrollReveal().reveal('.course-holder .course-wrapper', { interval: 60, opacity: 0 });
+  // , afterReveal: (e) => { e.classList.add('bg-shadow') }
+
+  // ScrollReveal().reveal('.course-holder .course', {
+  //   interval: 60,
+  //   opacity: 0,
+  //   beforeReveal: function (el) {
+  //     el.classList.add('revealed');
+  //   },
+  //   beforeReset: function (el) {
+  //     el.classList.remove('revealed');
+  //   }
+  // });
 
 });
