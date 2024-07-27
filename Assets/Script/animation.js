@@ -96,3 +96,9 @@ gsap.to('#video-section .background-element', {
 //     markers: true
 //   }
 // })
+
+// ----------------- Marquee Animation ----------------
+
+// gsap.to('.marquee-section-container .marquee-holder', {
+
+// })
