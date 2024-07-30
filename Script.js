@@ -33,3 +33,24 @@
 //     ? "transform"
 //     : "fixed"*/
 // });
+
+
+
+// ----------- Slider JS Functions ---------
+var splide1 = new Splide("#image-carousel-1", {
+    type: "fade",
+    rewind: true,
+    autoplay: "playing",
+});
+
+var splide2 = new Splide("#image-carousel-2", {
+    type: "fade",
+    rewind: true,
+    autoplay: "playing",
+});
+
+
+
+splide1.mount();
+splide2.mount();
+

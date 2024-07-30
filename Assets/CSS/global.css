@@ -43,6 +43,14 @@ a {
     display: flex;
 }
 
+.gap-12{
+    gap: 12px;
+}
+
+.align-item-c{
+    align-items: center;
+}
+
 .center {
     justify-content: center;
     align-items: center;
@@ -72,6 +80,8 @@ a {
     --black: #202020;
     --white: #ffff;
     --orange: #fa513a;
+    --dark-blue:#03052a;
+    --light-blue: #062d6e;
     --tile-1: linear-gradient(72deg, rgba(109, 128, 254, 0.70) 0.45%, #23D2FD 100%);
     --tile-2: linear-gradient(72deg, rgba(2, 170, 189, 0.70) -1.48%, #00CDAC 100%);
     --tile-3: linear-gradient(72deg, #FF998B 0%, #FF6D88 100%);
