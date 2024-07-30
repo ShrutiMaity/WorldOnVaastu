@@ -34,7 +34,6 @@ header {
     box-shadow: 0 8px 32px 0 rgba(31, 34, 75, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 header .logo {
@@ -484,6 +483,86 @@ header button {
     font-weight: var(--medium);
     color: var(--white);
     margin-top: 16px;
+}
+
+/*******************************/
+/* Marquee Section */
+/*******************************/
+
+#marquee-section {
+    max-width: 100vw;
+}
+
+#marquee-section .marquee-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    gap: 32px;
+}
+
+@keyframes marquee1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-107%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(-107%);
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+#marquee-section .marquee-section-container .marquee-holder {
+    display: flex;
+    gap: 16px;
+    animation: marquee1 50s linear infinite;
+}
+
+#marquee-section .marquee-section-container .marquee-holder.second {
+    transform: translateX(-107%);
+    animation: marquee2 50s linear infinite;
+}
+
+#marquee-section .marquee-section-container .image-holder {
+    min-width: 300px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#marquee-section .marquee-section-container .youtube-link {
+    /* border: 1px solid; */
+    text-align: center;
+    font-weight: var(--medium);
+    display: flex;
+    justify-content: center;
+}
+
+#marquee-section .marquee-section-container .youtube-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    background-color: #132055;
+    color: var(--white);
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+#marquee-section .marquee-section-container .youtube-link i {
+    color: red;
+    font-size: 30px;
 }
 
 
