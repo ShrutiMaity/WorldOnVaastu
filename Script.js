@@ -1,6 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
+    // --------------- PopUp Function --------------- //
+
+    const startPopUpCountdown = () => {
+        let countdownTime = 15 * 60;
+
+        const countdownInterval = setInterval(() => {
+            const hours = Math.floor(countdownTime / 3600);
+            const minutes = Math.floor((countdownTime % 3600) / 60);
+            const seconds = countdownTime % 60;
+
+            document.querySelector('.number.hours p').textContent = String(hours).padStart(2, '0');
+            document.querySelector('.number.minutes p').textContent = String(minutes).padStart(2, '0');
+            document.querySelector('.number.seconds p').textContent = String(seconds).padStart(2, '0');
+
+            countdownTime--;
+
+            if (countdownTime < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector('.overlay .enroll-btn').textContent = "Offer Expired";
+            }
+        }, 1000);
+    }
+
+    // Pop Up Timer
+    const showPopUp = () => {
+        const countdownTimeout = setTimeout(() => {
+            document.querySelector('.overlay').style.display = "grid";
+            startPopUpCountdown();
+        }, 1500)
+    }
+
+
+    document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+        document.querySelector('.overlay').style.display = "none";
+    })
+
+    document.querySelector('.overlay .enroll-btn').addEventListener('click', () => {
+        document.querySelector('.overlay').style.display = "none";
+    })
+
+    showPopUp();
+
+
     // ----------- Slider JS Functions ---------
     var splide1 = new Splide("#image-carousel-1", {
         type: "fade",
@@ -268,5 +311,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+
+
+
+
 
 
