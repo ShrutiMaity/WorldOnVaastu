@@ -441,10 +441,6 @@ header button {
     margin: 1px;
 }
 
-/*******************************/
-/* - UPCOMMING EVENTS SECTION - */
-/*******************************/
-
 .course-section-container .course-holder .course::after {
     transform: translateZ(-1px) !important;
     position: absolute;
@@ -970,6 +966,10 @@ header button {
     color: var(--orange);
 }
 
+/*******************************/
+/* ---- FAQ SECTION ---- */
+/*******************************/
+
 #FAQs {
     background-color: var(--dark-blue);
     /* border-radius: 20px; */
@@ -1018,19 +1018,23 @@ header button {
 #FAQs .faq-container .FAQ-holder .faq i {
     font-size: 32px;
     color: var(--orange);
+    transition: rotate 0.2s linear;
 }
 
 #FAQs .faq-container .FAQ-holder .faq i.rotate {
     rotate: -45deg;
-    transition: rotate 0.2s linear;
 }
 
 #FAQs .faq-container .FAQ-holder .faq .answer {
-    display: none;
+    /* display: none; */
+    /* height: 0; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s linear;
 }
 
 #FAQs .faq-container .FAQ-holder .faq .answer.open {
     margin-top: 8px;
-    display: block;
-
+    max-height: fit-content;
+    /* display: block; */
 }

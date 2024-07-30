@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activated = false;
 
     window.addEventListener('scroll', () => {
-        if (scrollY > about.offsetTop-100 && activated == false) {
+        if (scrollY > about.offsetTop - 100 && activated == false) {
             counterData.forEach(e => {
                 let target = parseInt(e.dataset.count);
                 let count = 0;
@@ -255,6 +255,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
     })
+
+    // ----------- FAQ JS Functions ---------
+
+    const faqsQuestion = document.querySelectorAll('.faq .question');
+
+    faqsQuestion.forEach(e => {
+        e.addEventListener('click', () => {
+            e.nextElementSibling.classList.toggle('open');
+            e.children[1].classList.toggle('rotate');
+        })
+
+    });
 });
 
 
