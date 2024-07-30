@@ -211,6 +211,50 @@ document.addEventListener('DOMContentLoaded', () => {
         autoplay: "playing"
     });
     splide3.mount();
+
+    // -----------About Section Counter JS Functions ---------
+
+    const counterData = document.querySelectorAll('.number-data');
+    let activated = false;
+
+    window.addEventListener('scroll', () => {
+        if (scrollY > about.offsetTop-100 && activated == false) {
+            counterData.forEach(e => {
+                let target = parseInt(e.dataset.count);
+                let count = 0;
+
+                let countUpdate = () => {
+                    if (count < target) {
+                        if (target <= 30) {
+                            count++;
+                            e.innerText = count + '+';
+                            setTimeout(countUpdate, 100)
+                        }
+                        else if (target <= 100) {
+                            count += 5;
+                            e.innerText = count + '+';
+                            setTimeout(countUpdate, 50)
+                        }
+                        else {
+                            count += 100;
+                            e.innerText = count + '+';
+                            setTimeout(countUpdate, 30)
+                        }
+
+
+                    }
+                    else {
+                        e.innerText = target + '+';
+                    }
+
+                    activated = true;
+
+                }
+                countUpdate();
+            })
+
+        }
+    })
 });
 
 
