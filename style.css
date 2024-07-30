@@ -581,7 +581,7 @@ header button {
     .splide__slide {
         filter: blur(4px);
         scale: 0.9;
-        transition: scale 0.3s ease;
+        transition: scale 0.3s ease , fliter 0.3s linear;
     }
 
     .is-active {
