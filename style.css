@@ -581,7 +581,7 @@ header button {
     .splide__slide {
         filter: blur(4px);
         scale: 0.9;
-        transition: scale 0.3s ease , fliter 0.3s linear;
+        transition: scale 0.3s ease, fliter 0.3s linear;
     }
 
     .is-active {
@@ -623,14 +623,21 @@ header button {
 /*******************************/
 
 #about {
+    min-height: 100vh;
+    max-width: 100vw;
     background-color: var(--dark-blue);
+    padding: 100px 0;
 }
 
 #about .about-container {
-    padding: 100px 0;
-    display: flex;
+    /* border: 1px solid red; */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
     gap: 48px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #about .about-container .left {
@@ -653,41 +660,67 @@ header button {
 
 #about .about-container .right {
     border-radius: 32px;
-    background: url(./Assets/Images/hero-bg.png);
-    background-position: center;
-    max-width: 700px;
-    display: flex;
-    align-items: end;
+    background: url(./Assets/Images/about-bg.png) no-repeat center;
+    background-size: cover;
     color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
-#about .about-container .right h2 {
-    font-size: 32px;
+#about .about-container .right .details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0 32px 32px;
+    /* padding: 64px 0 64px 64px; */
+}
+
+#about .about-container .right .details-section h2 {
+    font-size: 44px;
 
     span {
         color: var(--orange);
     }
 }
 
-#about .about-container .right img {
-    width: 300px;
-    height: 380px;
+#about .about-container .right .details-section .details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: var(--regular);
+    font-size: 14px;
 }
 
-#about .about-container .right p {
-    font-weight: 100;
+#about .about-container .right .image-holder {
+    height: 400px;
+    width: 385px;
+    flex-shrink: 0;
+    align-self: end;
 }
 
 #about .about-container .right i {
     font-size: 24px;
 }
 
-.about-right-data {
-    padding: 24px;
-    display: flex;
-    gap: 24px;
-    flex-direction: column;
+#about .about-container .right .right-arrow {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #132055;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    i {
+        font-size: 36px;
+    }
 }
+
+
+
 
 #FAQs {
     background-color: var(--dark-blue);
