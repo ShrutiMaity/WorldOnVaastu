@@ -41,10 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.overlay').style.display = "none";
     })
 
-    showPopUp();
+    // showPopUp();
 
 
     // ----------- Slider JS Functions ---------
+
     var splide1 = new Splide("#image-carousel-1", {
         type: "fade",
         rewind: true,
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-    const courseContainer = document.querySelector('#course-section .course-holder');
+    const courseContainer = document.querySelector('#course .course-holder');
     const tagsContainer = document.querySelector('.course-tags')
     const tagsList = document.querySelectorAll('.course-tags .tags')
 
@@ -196,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let imageTag = document.createElement('img')
             imageTag.src = imgSrc;
             imageTag.alt = name;
+            imageTag.loading = 'lazy';
             imgHolder.appendChild(imageTag);
 
             let nameTag = document.createElement('p');
@@ -243,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     renderCourse(coursesList);
-    ScrollReveal().reveal('.course-holder .course-wrapper', { interval: 60, opacity: 0 });
+    ScrollReveal().reveal('.course-holder .course-wrapper', { interval: 60, opacity: 0, reset: false });
 
     // ----------- Testimonials Slider JS Functions ---------
 
@@ -257,6 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // -----------About Section Counter JS Functions ---------
 
+    const about = document.getElementById('about-us')
     const counterData = document.querySelectorAll('.number-data');
     let activated = false;
 
@@ -305,8 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     faqsQuestion.forEach(e => {
         e.addEventListener('click', () => {
-            e.nextElementSibling.classList.toggle('open');
-            e.children[1].classList.toggle('rotate');
+            let element = e.nextElementSibling;
+            let currentHeight = element.style.height;
+            let isCollapsed = currentHeight === '' || currentHeight === '0px';
+            element.style.height = isCollapsed ? `${element.scrollHeight}px` : '0px';
         })
 
     });

@@ -23,6 +23,18 @@ input {
     border: none;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 button {
     font-size: inherit;
     font-weight: inherit;
@@ -43,11 +55,11 @@ a {
     display: flex;
 }
 
-.gap-12{
+.gap-12 {
     gap: 12px;
 }
 
-.align-item-c{
+.align-item-c {
     align-items: center;
 }
 
@@ -70,18 +82,48 @@ a {
     justify-content: flex-end;
 }
 
+.section-heading {
+    font-size: 52px;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 32px;
+
+    span {
+        color: var(--orange);
+    }
+}
+
+.section-container {
+    max-width: 1200px;
+}
+
 /* ********************* */
 /* ---- Root Elements ---- */
 /* ********************* */
 
 :root {
     /* ----------- Colors ----------- */
-  
+
     --black: #202020;
     --white: #ffff;
     --orange: #fa513a;
-    --dark-blue:#03052a;
+    /* --orange: rgb(252, 115, 36); */
+    --dark-blue: #03052a;
     --light-blue: #062d6e;
+    --grey-bg: #F9F9F9;
+    --grey-line: #DCDCDC;
+    --grey-text: #898989;
+
+    --navBar-bg-color: rgba(163, 162, 162, 0.183);
+    --navBar-logo-bg-color: rgba(255, 255, 255, 0.301);
+
+    --landing-page-highlighted: rgba(255, 255, 255, 0.1);
+    --facebook: #1aa5fa;
+    --instagram: linear-gradient(to right,
+            #833ab4, #fd1d1d, #fcb045);
+    --youtube: #fe0908;
+
+
     --tile-1: linear-gradient(72deg, rgba(109, 128, 254, 0.70) 0.45%, #23D2FD 100%);
     --tile-2: linear-gradient(72deg, rgba(2, 170, 189, 0.70) -1.48%, #00CDAC 100%);
     --tile-3: linear-gradient(72deg, #FF998B 0%, #FF6D88 100%);
@@ -89,22 +131,22 @@ a {
     --tile-5: linear-gradient(72deg, #764BA2 0%, #667EEA 100%);
     --tile-6: linear-gradient(72deg, #09203F 0%, #537895 100%);
     --tile-7: linear-gradient(72deg, #FF61D2 0%, #FE9090 100%);
-  
-  
+
+
     /* ---------- Font Weight ---------- */
-  
+
     --regular: 400;
     --medium: 500;
     --semibold: 600;
     --bold: 700;
-  
+
     /* ------------- Shadows -------------*/
-  
+
     --dashboard-tiles-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     --form-overflow-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  
+
     /*  ------------- Transition  --------------*/
     --transition-5: 0.5s ease;
     --transition-3: 0.3s ease;
     --transition-2: 0.2s ease;
-  }
+}
