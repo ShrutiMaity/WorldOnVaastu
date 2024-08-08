@@ -93,9 +93,23 @@ a {
     }
 }
 
+@media (max-width: 600px) {
+    .section-heading {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 440px) {
+    .section-heading {
+        font-size: 36px;
+    }
+}
+
 .section-container {
     max-width: 1200px;
 }
+
+
 
 /* ********************* */
 /* ---- Root Elements ---- */

@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
+    // --------- Mobile Navigation Function --------- //
+
+    const mobileNavItems = document.querySelector('.mobile-nav-items')
+    const hamBurger = document.querySelector('.hamburger')
+
+    const toggleNavBar = () => {
+        hamBurger.classList.toggle('is-active')
+        mobileNavItems.classList.toggle('active')
+    }
+
+    hamBurger.addEventListener('click', toggleNavBar)
+    mobileNavItems.addEventListener('click', toggleNavBar)
+
+
     // --------------- PopUp Function --------------- //
 
     const startPopUpCountdown = () => {
@@ -41,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.overlay').style.display = "none";
     })
 
-    // showPopUp();
+    showPopUp();
 
 
     // ----------- Slider JS Functions ---------
@@ -315,6 +329,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
     });
+
+
+
 });
 
 

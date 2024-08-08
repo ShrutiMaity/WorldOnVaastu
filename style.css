@@ -9,13 +9,14 @@
 }
 
 /*******************************/
-/* NavBar */
+/* ---------- NavBar ---------- */
 /*******************************/
+
+
 header {
     position: relative;
     z-index: 998;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100vw;
 }
 
 .header-container {
@@ -23,13 +24,20 @@ header {
     left: 0;
     right: 0;
     transform: translate(0, 25px);
+    padding: 0 64px;
+}
+
+.header-container .nav-items {
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 20px;
     padding: 8px 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background-color: var(--navBar-bg-color);
+    position: relative;
+
     box-shadow: 0 8px 32px 0 rgba(31, 34, 75, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -62,12 +70,20 @@ header nav a:hover {
     opacity: 1;
 }
 
-header button {
+header .enroll-btn {
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: var(--medium);
     background-color: var(--orange);
     color: var(--white);
+}
+
+header .header-container .hamburger {
+    display: none;
+}
+
+header .header-container .mobile-nav-items {
+    display: none;
 }
 
 /*******************************/
@@ -76,6 +92,7 @@ header button {
 
 #hero-section {
     max-width: 100vw;
+    padding: 0 64px;
     background: url(./Assets/Images/BackgroundImages/HeroSection.png) no-repeat center;
     background-size: cover;
     display: flex;
@@ -203,7 +220,7 @@ header button {
 
 #video-section .video-section-container {
     position: relative;
-    padding: 8rem 0;
+    padding: 8rem 64px;
     width: 100%;
     display: grid;
     place-items: center;
@@ -356,6 +373,7 @@ header button {
 
 #course {
     max-width: 100vw;
+    padding: 0 64px;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
     display: flex;
 }
@@ -372,6 +390,7 @@ header button {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .course-section-container .course-tags span {
@@ -725,8 +744,9 @@ header button {
 
 #upcommingEvents {
     max-width: 100vw;
-    background: var(--dark-blue) url(./Assets/Images/line-bg.png) no-repeat center;
+    background: var(--dark-blue) url(./Assets/Images/BackgroundImages/line-bg.png) no-repeat center;
     background-size: cover;
+    padding: 0 64px;
 }
 
 #upcommingEvents .upcommingEvents-section-container {
@@ -756,9 +776,9 @@ header button {
 .upcommingEvents-section-container .header .strike {
     display: block;
     position: absolute;
-    width: 30%;
+    width: 400px;
     left: 50%;
-    bottom: -20px;
+    bottom: -25px;
     transform: translate(-50%, 0);
     fill: var(--orange);
     z-index: -1;
@@ -768,6 +788,7 @@ header button {
     margin-top: 64px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto 1fr;
     gap: 64px;
 }
 
@@ -807,6 +828,7 @@ header button {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 
     .line {
         align-self: stretch;
@@ -821,12 +843,17 @@ header button {
     display: inline-block;
     margin-top: 8px;
     font-size: 12px;
+    font-weight: var(--semibold);
 }
 
 .upcommingEvents-section-container .upcomming-events .image-holder {
     border-radius: 5px;
     overflow: hidden;
     height: 400px;
+}
+
+.upcommingEvents-section-container .upcomming-events .image-holder img {
+    object-fit: cover;
 }
 
 
@@ -836,6 +863,7 @@ header button {
 
 #tags-section {
     max-width: 100vw;
+    padding: 0 64px;
     background: var(--dark-blue) url(./Assets/Images/BackgroundImages/Tag-bg.png) no-repeat center;
     background-size: cover;
 }
@@ -963,7 +991,7 @@ header button {
 #community-members-section {
     max-width: 100vw;
     background-color: var(--dark-blue);
-    padding: 100px;
+    padding: 100px 64px;
 }
 
 #community-members-section .community-members-section-conatiner {
@@ -1010,7 +1038,7 @@ header button {
 #contact {
     max-width: 100vw;
     background-color: var(--white);
-    padding: 100px 0;
+    padding: 100px 64px;
 }
 
 #contact .Form-section-container {
@@ -1023,9 +1051,12 @@ header button {
 }
 
 #contact .Form-section-container .form-holder {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 16px;
     margin-top: 16px;
 }
 
@@ -1034,6 +1065,7 @@ header button {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    flex: 1 1 250px;
 }
 
 #contact .Form-section-container .form-holder .input-holder {
@@ -1145,7 +1177,7 @@ header button {
 
 footer {
     max-width: 100vw;
-    padding: 50px 0;
+    padding: 50px 64px;
     background: url(./Assets/Images/BackgroundImages/Background-2.png) no-repeat center;
     background-size: cover;
 }
@@ -1192,6 +1224,7 @@ footer .footer-section-container .right-section .links-holder .header {
     font-weight: var(--medium);
     font-weight: var(--semibold);
     margin-bottom: 16px;
+    white-space: nowrap;
 }
 
 
@@ -1313,6 +1346,7 @@ footer .footer-section-container .copy-right {
         width: 550px;
         height: 450px;
         background: radial-gradient(circle, rgba(245, 175, 25, 1) 0%, rgba(241, 39, 17, 1) 98%);
+        /* background: radial-gradient(circle, rgba(250, 81, 58, 1) 0%, rgba(3, 5, 42, 1) 42%); */
         border-radius: 20px;
         padding: 16px;
         display: flex;
