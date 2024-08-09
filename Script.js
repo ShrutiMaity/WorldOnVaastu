@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.overlay').style.display = "none";
     })
 
-    showPopUp();
+    // showPopUp();
 
 
     // ----------- Slider JS Functions ---------
@@ -263,11 +263,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ----------- Testimonials Slider JS Functions ---------
 
-    var splide3 = new Splide("#image-carouse3", {
+    const splide3 = new Splide("#image-carouse3", {
         type: "loop",
         perPage: 3,
         focus: "center",
-        autoplay: "playing"
+        autoplay: "playing",
+        gap: '24px',
+        breakpoints: {
+            1200: {
+                perPage: 1
+            },
+        }
     });
     splide3.mount();
 
