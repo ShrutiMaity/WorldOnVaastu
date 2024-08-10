@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --------------- Animate On Scroll Init --------------- //
+
+    console.log(AOS);
+    
+    AOS.init();
+
+    // --------- Sticky Advertisement Section --------- //
+
+    const stickyAdvtSection = document.querySelector('#advertisement-section')
+    const stickyAdvtSectionCloseBtn = document.querySelector('#advertisement-section .close-btn')
+
+    stickyAdvtSectionCloseBtn.addEventListener('click', () => {
+        stickyAdvtSection.style.display = 'none'
+    })
 
     // --------- Mobile Navigation Function --------- //
 
@@ -322,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    // ----------- FAQ JS Functions ---------
+    // ----------- FAQ JS Functions --------- //
 
     const faqsQuestion = document.querySelectorAll('.faq .question');
 
@@ -336,8 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
-
+    // ----------- Footer Date Function --------- //
+    document.getElementById('.year') = Date().getFullYear();
 });
 
 

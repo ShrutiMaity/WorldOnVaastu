@@ -49,6 +49,7 @@ i {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .flex {
@@ -137,14 +138,6 @@ a {
             #833ab4, #fd1d1d, #fcb045);
     --youtube: #fe0908;
 
-
-    --tile-1: linear-gradient(72deg, rgba(109, 128, 254, 0.70) 0.45%, #23D2FD 100%);
-    --tile-2: linear-gradient(72deg, rgba(2, 170, 189, 0.70) -1.48%, #00CDAC 100%);
-    --tile-3: linear-gradient(72deg, #FF998B 0%, #FF6D88 100%);
-    --tile-4: linear-gradient(72deg, #09AFE8 0%, #29F499 100%);
-    --tile-5: linear-gradient(72deg, #764BA2 0%, #667EEA 100%);
-    --tile-6: linear-gradient(72deg, #09203F 0%, #537895 100%);
-    --tile-7: linear-gradient(72deg, #FF61D2 0%, #FE9090 100%);
 
 
     /* ---------- Font Weight ---------- */
